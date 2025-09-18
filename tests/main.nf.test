@@ -11,8 +11,6 @@ nextflow_process {
 
     test("homo_sapiens - 2 bigwig files") {
 
-        config "./nextflow.memory.config"
-
         when {
             process {
                 """
@@ -82,8 +80,6 @@ nextflow_process {
 
     test("homo_sapiens - 2 bigwig files - with blacklist") {
 
-        config "./nextflow.memory.config"
-
         when {
             process {
                 """
@@ -118,7 +114,6 @@ nextflow_process {
     test("homo_sapiens - 2 bigwig files - stub") {
 
         options "-stub"
-        config "./nextflow.memory.config"
 
         when {
             process {
