@@ -122,7 +122,9 @@ workflow GENERATE_COMPARISONS_BIGWIG {
                 csv_expid_filter: expid1 == expid2 
             ]
 
-            [meta_csv, bigwig1, bigwig2, output_bigwig_name]
+            def meta_for_module = meta_csv + [ id: output_bigwig_name ]
+            [ meta_for_module, bigwig1, bigwig2, output_bigwig_name ]
+
         }
         .set { comparisons_merge_ch }
 
