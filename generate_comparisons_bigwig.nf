@@ -132,5 +132,5 @@ workflow GENERATE_COMPARISONS_BIGWIG {
     )
 
     emit:
-    bigwig_results = DEEPTOOLS_BIGWIGCOMPARE.out.results           // channel: [meta, results]
+    comparison_results = DEEPTOOLS_BIGWIGCOMPARE.out.results           // channel: [meta, results]
 }
