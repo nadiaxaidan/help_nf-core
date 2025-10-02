@@ -110,9 +110,9 @@ workflow GENERATE_COMPARISONS_BIGWIG {
 
             def output_bigwig_name
             if (expid1 == expid2) {
-                output_bigwig_name = "${expid1}_${fraction1}vs${fraction2}.q${params.q_score}.${params.normalizeUsing}"
+                output_bigwig_name = "${expid1}_${fraction1}vs${fraction2}"
             } else {
-                output_bigwig_name = "${expid1}_${fraction1}_vs_${expid2}_${fraction2}.q${params.q_score}.${params.normalizeUsing}"
+                output_bigwig_name = "${expid1}_${fraction1}_vs_${expid2}_${fraction2}"
             }
 
             def meta_csv = [
